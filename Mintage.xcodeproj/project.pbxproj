@@ -24,6 +24,7 @@
 		1350755F27F3EE9C001557EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1350756227F3EE9C001557EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1350756427F3EE9C001557EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1350756C27F3F052001557EB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Mintage/Views/README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +41,7 @@
 		1350754A27F3EE9B001557EB = {
 			isa = PBXGroup;
 			children = (
+				1350756C27F3F052001557EB /* README.md */,
 				1350755527F3EE9B001557EB /* Mintage */,
 				1350755427F3EE9B001557EB /* Products */,
 			);
@@ -58,13 +60,29 @@
 			children = (
 				1350755627F3EE9B001557EB /* AppDelegate.swift */,
 				1350755827F3EE9B001557EB /* SceneDelegate.swift */,
-				1350755A27F3EE9B001557EB /* ViewController.swift */,
-				1350755C27F3EE9B001557EB /* Main.storyboard */,
+				1350756B27F3EEF8001557EB /* Controller */,
+				1350756A27F3EEF0001557EB /* Views */,
 				1350755F27F3EE9C001557EB /* Assets.xcassets */,
-				1350756127F3EE9C001557EB /* LaunchScreen.storyboard */,
 				1350756427F3EE9C001557EB /* Info.plist */,
 			);
 			path = Mintage;
+			sourceTree = "<group>";
+		};
+		1350756A27F3EEF0001557EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1350755C27F3EE9B001557EB /* Main.storyboard */,
+				1350756127F3EE9C001557EB /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1350756B27F3EEF8001557EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1350755A27F3EE9B001557EB /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,7 +322,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +350,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
