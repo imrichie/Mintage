@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131DA22B285A9FF6008B8F22 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131DA22A285A9FF6008B8F22 /* Constants.swift */; };
 		1350755727F3EE9B001557EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1350755627F3EE9B001557EB /* AppDelegate.swift */; };
 		1350755927F3EE9B001557EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1350755827F3EE9B001557EB /* SceneDelegate.swift */; };
 		1350755B27F3EE9B001557EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1350755A27F3EE9B001557EB /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		131DA22A285A9FF6008B8F22 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1350755327F3EE9B001557EB /* Mintage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mintage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1350755627F3EE9B001557EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1350755827F3EE9B001557EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				13C67EAA2859A7AA00B36DA3 /* CoinData.swift */,
 				13C67EAC2859A7B300B36DA3 /* CoinManager.swift */,
+				131DA22A285A9FF6008B8F22 /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				1350755727F3EE9B001557EB /* AppDelegate.swift in Sources */,
 				1350755927F3EE9B001557EB /* SceneDelegate.swift in Sources */,
 				13C67EAD2859A7B300B36DA3 /* CoinManager.swift in Sources */,
+				131DA22B285A9FF6008B8F22 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

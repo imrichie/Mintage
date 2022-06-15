@@ -8,12 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  let coinManager = CoinManager()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
+    coinManager.getCryptoPrice(in: "USD")
   }
-
-
 }
-
