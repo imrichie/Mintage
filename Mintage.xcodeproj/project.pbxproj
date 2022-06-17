@@ -95,8 +95,8 @@
 		13C67EA92859A76F00B36DA3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				13C67EAA2859A7AA00B36DA3 /* CoinData.swift */,
 				13C67EAC2859A7B300B36DA3 /* CoinManager.swift */,
+				13C67EAA2859A7AA00B36DA3 /* CoinData.swift */,
 				131DA22A285A9FF6008B8F22 /* Constants.swift */,
 			);
 			path = Model;
