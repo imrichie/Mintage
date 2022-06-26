@@ -23,10 +23,27 @@ struct CoinManager {
   }
   
   func performRequest(with url: URL) {
-    print("URL: \(url)")
+    let session = URLSession(configuration: .default)
+    session.dataTask(with: url) { data, response, error in
+      if let error = error {
+        print("ERROR retreiving data >>> \(error.localizedDescription)")
+      }
+      
+      if let safeData = data {
+        parseJSON(safeData)
+      }
+    }.resume()
   }
   
   func parseJSON(_ data: Data) {
-    
+    print("SUCCESS retreiving data...")
+    let decoder = JSONDecoder()
+    do {
+      let safeData = try decoder.decode(CoinData.self, from: data)
+      print("RATE: \(safeData.rate)")
+      print("CRYPTO: \(safeData.crypto)")
+    } catch {
+      print("ERROR parsing JSON: \(error.localizedDescription)")
+    }
   }
 }

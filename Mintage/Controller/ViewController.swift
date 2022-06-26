@@ -12,7 +12,6 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
-    coinManager.getPrices(in: "USD Coin")
+    coinManager.getPrices(in: "USD")
   }
 }
