@@ -16,24 +16,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Mintage!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KE-vF-jVq">
-                                <rect key="frame" x="61.5" y="418" width="291" height="60"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qrw-vV-4vl">
+                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CountryCell" textLabel="XoE-Vf-wbN" rowHeight="65" style="IBUITableViewCellStyleDefault" id="3xS-GO-dIw">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3xS-GO-dIw" id="XzN-5W-4O8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XoE-Vf-wbN">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="65"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="d8t-v5-8Ke"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5Zj-LR-8Pm"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Enter Country Name..." translatesAutoresizingMaskIntoConstraints="NO" id="WTU-jd-wEs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits" textContentType="country-name"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="njm-8f-Ymg"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
-                            <constraint firstItem="2KE-vF-jVq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UgC-yT-VSs"/>
-                            <constraint firstItem="2KE-vF-jVq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fhD-AV-tMW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qrw-vV-4vl" secondAttribute="bottom" id="DRh-dv-smY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qrw-vV-4vl" secondAttribute="trailing" id="H5b-oy-WGX"/>
+                            <constraint firstItem="WTU-jd-wEs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hsu-sn-EZZ"/>
+                            <constraint firstItem="WTU-jd-wEs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UUN-PV-8zS"/>
+                            <constraint firstItem="qrw-vV-4vl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XTm-tZ-wAc"/>
+                            <constraint firstItem="WTU-jd-wEs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pLX-sg-Bgb"/>
+                            <constraint firstItem="qrw-vV-4vl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="ygQ-zA-uby"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="WTU-jd-wEs" id="NiQ-xX-qGH"/>
+                        <outlet property="tableView" destination="qrw-vV-4vl" id="fB0-G5-Bef"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
+            <point key="canvasLocation" x="-794.20289855072474" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>
