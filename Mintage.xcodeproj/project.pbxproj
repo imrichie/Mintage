@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1314248C28735E4D004DB4F5 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1314248A28735E41004DB4F5 /* SearchResultCell.swift */; };
 		131DA22B285A9FF6008B8F22 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131DA22A285A9FF6008B8F22 /* Constants.swift */; };
 		1350755727F3EE9B001557EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1350755627F3EE9B001557EB /* AppDelegate.swift */; };
 		1350755927F3EE9B001557EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1350755827F3EE9B001557EB /* SceneDelegate.swift */; };
@@ -20,8 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1314248A28735E41004DB4F5 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
-		1314248B28735E41004DB4F5 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		131DA22A285A9FF6008B8F22 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1350755327F3EE9B001557EB /* Mintage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mintage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1350755627F3EE9B001557EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +80,6 @@
 			children = (
 				1350755C27F3EE9B001557EB /* Main.storyboard */,
 				1350756127F3EE9C001557EB /* LaunchScreen.storyboard */,
-				1314248B28735E41004DB4F5 /* SearchResultCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -92,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				1350755A27F3EE9B001557EB /* ViewController.swift */,
-				1314248A28735E41004DB4F5 /* SearchResultCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,7 +173,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1314248C28735E4D004DB4F5 /* SearchResultCell.swift in Sources */,
 				13C67EAB2859A7AA00B36DA3 /* CoinData.swift in Sources */,
 				1350755B27F3EE9B001557EB /* ViewController.swift in Sources */,
 				1350755727F3EE9B001557EB /* AppDelegate.swift in Sources */,
@@ -260,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -314,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
