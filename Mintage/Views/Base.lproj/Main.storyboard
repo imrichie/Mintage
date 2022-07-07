@@ -88,6 +88,7 @@
                         <outlet property="cryptoView" destination="xAf-yD-Fxs" id="xgS-vA-3As"/>
                         <outlet property="image" destination="EKj-Ml-k8V" id="XVT-sw-Aa9"/>
                         <outlet property="rateLabel" destination="YXa-tz-UOr" id="Pvp-eZ-omA"/>
+                        <outlet property="segmentedControl" destination="KWC-hf-FC3" id="EAS-ze-WXd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j8D-zP-Kmg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

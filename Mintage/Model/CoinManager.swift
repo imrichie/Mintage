@@ -15,11 +15,11 @@ protocol CoinManagerDelegate: AnyObject {
 struct CoinManager {
   var delegate: CoinManagerDelegate?
   
-  func fetchBTCPrices() {
+  func fetchPrices(for crypto: String) {
     var components = URLComponents()
     components.scheme = "https"
     components.host = "rest.coinapi.io"
-    components.path = "/v1/exchangerate/BTC/USD"
+    components.path = "/v1/exchangerate/\(crypto)/USD"
     components.queryItems = [URLQueryItem(name: "apikey", value: Constants.coinApiKey)]
     
     if let formattedURL = components.url {
