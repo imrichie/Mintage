@@ -9,4 +9,7 @@ import Foundation
 
 struct Constants {
   static let coinApiKey: String = "4B44C968-85DE-4972-BDCA-73633F41C832"
+  struct Identifiers {
+    static let cellIdentifier: String = "CryptoTableViewCell"
+  }
 }

@@ -8,9 +8,9 @@
 import Foundation
 
 struct CoinData: Codable {
-  let rate: Double      // i.e., $20.65
-  let currency: String  // i.e., USD
-  let crypto: String    // i.e., BTC
+  let rate: Double
+  let currency: String
+  let crypto: String
   
 }
 
@@ -21,11 +21,3 @@ extension CoinData {
     case crypto = "asset_id_base"
   }
 }
-
-
-// Display top 5 crypto currencies
-// BTC
-// ETH
-// DOGE
-// USDT
-// USDC
