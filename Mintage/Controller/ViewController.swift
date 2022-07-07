@@ -19,16 +19,35 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     manager.delegate = self
-    cryptoView.layer.cornerRadius = 10
-    manager.fetchPrices(for: "DOGE")
-    
+    manager.fetchPrices(for: segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex)!)
+    cryptoView.layer.cornerRadius = 10    
+  }
+  
+  func formatRate(number: Double) -> String {
+    let formatter = NumberFormatter()
+    formatter.numberStyle = .currency
+    return formatter.string(from: NSNumber(value: number)) ?? "$0.00"
+  }
+  
+  @IBAction func indexChanged(_ sender: UISegmentedControl) {
+    switch segmentedControl.selectedSegmentIndex {
+      case 0:
+        manager.fetchPrices(for: sender.titleForSegment(at: 0)!)
+      case 1:
+        manager.fetchPrices(for: sender.titleForSegment(at: 1)!)
+      case 2:
+        manager.fetchPrices(for: sender.titleForSegment(at: 2)!)
+      default:
+        break;
+    }
   }
 }
 
 extension ViewController: CoinManagerDelegate {
   func didUpdatePrice(_ manager: CoinManager, data: CoinData) {
+    let formattedRate = formatRate(number: data.rate)
     DispatchQueue.main.async {
-      self.rateLabel.text = "\(data.rate)"
+      self.rateLabel.text = formattedRate
       self.cryptoLabel.text = "\(data.crypto)"
       self.image.image = UIImage(named: "\(data.crypto)")
     }
@@ -37,6 +56,4 @@ extension ViewController: CoinManagerDelegate {
   func didFailWithError(error: Error) {
     print("ERROR: \(error.localizedDescription)")
   }
-  
-  
 }
