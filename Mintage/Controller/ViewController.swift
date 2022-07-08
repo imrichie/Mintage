@@ -18,15 +18,23 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    configureMainview()
     manager.delegate = self
     manager.fetchPrices(for: segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex)!)
-    cryptoView.layer.cornerRadius = 10    
   }
   
   func formatRate(number: Double) -> String {
     let formatter = NumberFormatter()
     formatter.numberStyle = .currency
     return formatter.string(from: NSNumber(value: number)) ?? "$0.00"
+  }
+  
+  func configureMainview() {
+    cryptoView.layer.cornerRadius = 10
+    cryptoView.layer.shadowColor = UIColor.black.cgColor
+    cryptoView.layer.shadowOpacity = 1
+    cryptoView.layer.shadowOffset = .zero
+    cryptoView.layer.shadowRadius = 10
   }
   
   @IBAction func indexChanged(_ sender: UISegmentedControl) {
