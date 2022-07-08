@@ -43,7 +43,6 @@ struct CoinManager {
   }
   
   func parseJSON(_ data: Data) -> CoinData? {
-    print("SUCCESS retreiving data...")
     let decoder = JSONDecoder()
     do {
       let safeData = try decoder.decode(CoinData.self, from: data)
