@@ -21,3 +21,5 @@ extension CoinData {
     case crypto = "asset_id_base"
   }
 }
+
+// added this line
