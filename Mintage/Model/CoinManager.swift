@@ -35,6 +35,7 @@ struct CoinManager {
       }
       
       guard let data = data else { return }
+      
       if let safeData = parseJSON(data) {
         delegate?.didUpdatePrice(self, data: safeData)
       }
@@ -46,8 +47,6 @@ struct CoinManager {
     let decoder = JSONDecoder()
     do {
       let safeData = try decoder.decode(CoinData.self, from: data)
-      print("RATE: \(safeData.rate)")
-      print("CRYPTO: \(safeData.crypto)")
       return safeData
     } catch {
       delegate?.didFailWithError(error: error)
