@@ -4,7 +4,7 @@ iOS Portfolio Application
 
 ## Description
 
-**Mintage** is an iOS application that let's you track the top 3 crypto prices - BTC, ETH, and DOGE. The app will give you the latest prices. So you can track how well your crypto investments are doing on the go.
+**Mintage** is a simple crypto currency tracker that keeps a birds-eye view on the top 3 crypto currencies on the market. Track Bitcoin (BTC), Doge (DOGE), and Ethereum (ETH)
 
 My intent with this app is to showcase my skills in consuming RESTful APIs building a dynamic application with standard iOS controls.
 
